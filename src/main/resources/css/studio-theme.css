@@ -1,0 +1,464 @@
+.root-panel,
+.workspace,
+.split-pane {
+    -fx-background-color: #0d1117;
+    -fx-font-family: "Consolas";
+}
+
+.top-bar,
+.status-bar {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+}
+
+.app-title {
+    -fx-text-fill: #f0f6fc;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.app-subtitle,
+.field-label,
+.panel-description {
+    -fx-text-fill: #8b949e;
+}
+
+.section-title {
+    -fx-text-fill: #c9d1d9;
+    -fx-font-weight: bold;
+}
+
+.monitor-panel,
+.quick-panel,
+.folder-panel {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.media-display {
+    -fx-background-color: #010409;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.on-air-display {
+    -fx-border-color: #f85149;
+}
+
+.preview-display {
+    -fx-border-color: #2ea043;
+}
+
+.display-placeholder {
+    -fx-text-fill: #484f58;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.media-row {
+    -fx-background-color: #0d1117;
+    -fx-padding: 6px;
+    -fx-background-radius: 5px;
+}
+
+.media-type-label {
+    -fx-text-fill: #58a6ff;
+    -fx-font-weight: bold;
+}
+
+.file-name-label {
+    -fx-text-fill: #8b949e;
+}
+
+.ready-label {
+    -fx-background-color: rgba(46, 160, 67, 0.20);
+    -fx-border-color: #2ea043;
+    -fx-text-fill: #56d364;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.empty-label {
+    -fx-background-color: #21262d;
+    -fx-border-color: #30363d;
+    -fx-text-fill: #6e7681;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 10px;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+}
+
+.button {
+    -fx-cursor: hand;
+}
+
+.primary-button {
+    -fx-background-color: #238636;
+    -fx-text-fill: white;
+    -fx-padding: 8px 12px;
+}
+
+.compact-button,
+.secondary-button,
+.auto-play-button {
+    -fx-background-color: #21262d;
+    -fx-text-fill: #c9d1d9;
+    -fx-border-color: #30363d;
+    -fx-padding: 8px 12px;
+}
+
+.auto-play-enabled {
+    -fx-background-color: #238636;
+    -fx-border-color: #56d364;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.auto-play-disabled {
+    -fx-background-color: #21262d;
+    -fx-border-color: #30363d;
+    -fx-text-fill: #8b949e;
+}
+
+.take-button {
+    -fx-background-color: #da3633;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 11px;
+}
+
+/*
+ * TAKE -> ON AIR bị khoá khi chưa chọn màn hình PROGRAM OUTPUT.
+ * Dùng chung cảm giác "mờ/tắt" như control khác, nhưng vẫn giữ rõ layout.
+ */
+.take-button:disabled {
+    -fx-opacity: 0.75;
+}
+
+/* Nút STOP đổi màu đỏ khi ON AIR đang chạy (đặt sau .secondary-button để override). */
+.stop-button-active {
+    -fx-background-color: #da3633;
+    -fx-border-color: #f85149;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Nút SELECT SCREEN: đỏ khi chưa chọn màn hình, xanh khi đã chọn. */
+.select-screen-unselected {
+    -fx-background-color: #da3633;
+    -fx-border-color: #f85149;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.select-screen-selected {
+    -fx-background-color: #238636;
+    -fx-border-color: #2ea043;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.quick-panel {
+    -fx-padding: 10px;
+}
+
+.video-slot {
+    -fx-min-height: 58px;
+    -fx-pref-height: 58px;
+    -fx-max-height: 58px;
+
+    -fx-padding: 5px 8px;
+
+    -fx-background-color: #1f2937;
+    -fx-text-fill: #58a6ff;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.audio-slot {
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+    -fx-max-height: 42px;
+
+    -fx-padding: 4px 8px;
+
+    -fx-background-color: #1c2d24;
+    -fx-text-fill: #56d364;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.capture-button {
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+    -fx-max-height: 58px;
+
+    -fx-padding: 4px 8px;
+
+    -fx-background-color: #2d2538;
+    -fx-text-fill: #d2a8ff;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.drop-target {
+    -fx-border-color: #f2cc60;
+    -fx-border-width: 3px;
+}
+
+.online-indicator {
+    -fx-text-fill: #f85149;
+    -fx-font-weight: bold;
+}
+
+.offline-indicator {
+    -fx-text-fill: #8b949e;
+}
+
+.label {
+    -fx-text-fill: #c9d1d9;
+}
+
+.list-view,
+.list-cell {
+    -fx-background-color: #0d1117;
+    -fx-text-fill: #c9d1d9;
+}
+
+.list-cell:selected {
+    -fx-background-color: #1f6feb;
+}
+
+.split-pane-divider {
+    -fx-background-color: #30363d;
+}
+
+.slider .track {
+    -fx-background-color: #30363d;
+}
+
+.slider .thumb {
+    -fx-background-color: #58a6ff;
+}
+
+.screen-dialog {
+    -fx-background-color: #0d1117;
+    -fx-border-color: #30363d;
+    -fx-border-width: 1px;
+}
+
+.screen-dialog > .content {
+    -fx-background-color: #0d1117;
+    -fx-padding: 16px;
+}
+
+.screen-dialog > .button-bar {
+    -fx-background-color: #161b22;
+    -fx-padding: 10px 16px;
+}
+
+.screen-dialog-icon {
+    -fx-min-width: 48px;
+    -fx-min-height: 48px;
+    -fx-max-width: 48px;
+    -fx-max-height: 48px;
+
+    -fx-alignment: center;
+
+    -fx-background-color: rgba(88, 166, 255, 0.14);
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #58a6ff;
+    -fx-border-radius: 10px;
+
+    -fx-text-fill: #58a6ff;
+    -fx-font-size: 22px;
+}
+
+.screen-dialog-title {
+    -fx-text-fill: #f0f6fc;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.screen-dialog-description {
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 12px;
+}
+
+.screen-dialog .combo-box {
+    -fx-min-height: 48px;
+    -fx-pref-height: 48px;
+    -fx-max-height: 48px;
+
+    -fx-background-color: #161b22;
+    -fx-border-color: #58a6ff;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.selected-screen-icon {
+    -fx-min-width: 30px;
+    -fx-min-height: 28px;
+    -fx-alignment: center;
+
+    -fx-background-color: #21262d;
+    -fx-border-color: #58a6ff;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+
+    -fx-text-fill: #58a6ff;
+}
+
+.selected-screen-name {
+    -fx-text-fill: #f0f6fc;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.selected-screen-resolution {
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 12px;
+}
+
+.screen-dialog-warning {
+    -fx-padding: 9px 12px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+}
+
+.screen-dialog .separator .line {
+    -fx-border-color: #30363d;
+    -fx-border-width: 1px 0 0 0;
+}
+
+
+
+.screen-dialog-field-label {
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+
+.screen-warning-normal {
+    -fx-background-color: rgba(46, 160, 67, 0.12);
+    -fx-border-color: rgba(86, 211, 100, 0.45);
+    -fx-text-fill: #56d364;
+}
+
+.screen-warning-danger {
+    -fx-background-color: rgba(210, 153, 34, 0.12);
+    -fx-border-color: rgba(242, 204, 96, 0.50);
+    -fx-text-fill: #f2cc60;
+}
+
+
+.screen-dialog .combo-box:hover {
+    -fx-border-color: #58a6ff;
+}
+
+.screen-dialog .combo-box-popup .list-view {
+    -fx-background-color: #161b22;
+    -fx-border-color: #30363d;
+    -fx-padding: 5px;
+}
+
+.screen-dialog .combo-box-popup .list-cell {
+    -fx-background-color: #161b22;
+    -fx-padding: 3px;
+}
+
+.screen-dialog .combo-box-popup .list-cell:hover {
+    -fx-background-color: #21262d;
+}
+
+.screen-dialog .combo-box-popup .list-cell:selected {
+    -fx-background-color: #1f2937;
+}
+
+.screen-option-icon {
+    -fx-min-width: 42px;
+    -fx-min-height: 34px;
+
+    -fx-alignment: center;
+
+    -fx-background-color: #21262d;
+    -fx-background-radius: 5px;
+
+    -fx-border-color: #58a6ff;
+    -fx-border-radius: 5px;
+
+    -fx-text-fill: #58a6ff;
+    -fx-font-size: 20px;
+}
+
+.screen-option-name {
+    -fx-text-fill: #f0f6fc;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.screen-option-detail {
+    -fx-text-fill: #8b949e;
+    -fx-font-size: 11px;
+}
+
+.studio-screen-badge {
+    -fx-background-color: rgba(210, 153, 34, 0.16);
+    -fx-background-radius: 4px;
+
+    -fx-text-fill: #f2cc60;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 2px 6px;
+}
+
+.primary-screen-badge {
+    -fx-background-color: rgba(88, 166, 255, 0.14);
+    -fx-background-radius: 4px;
+
+    -fx-text-fill: #58a6ff;
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 2px 6px;
+}
+
+.screen-dialog .button {
+    -fx-min-width: 100px;
+    -fx-min-height: 34px;
+    -fx-padding: 8px 18px;
+
+    -fx-background-color: #21262d;
+    -fx-border-color: #30363d;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+
+    -fx-text-fill: #c9d1d9;
+    -fx-font-weight: bold;
+}
+
+.screen-dialog .button:hover {
+    -fx-background-color: #30363d;
+    -fx-border-color: #8b949e;
+}
+
+.screen-dialog .button:default {
+    -fx-background-color: #238636;
+    -fx-border-color: #2ea043;
+    -fx-text-fill: white;
+}
+
+.screen-dialog .button:default:hover {
+    -fx-background-color: #2ea043;
+}
+
